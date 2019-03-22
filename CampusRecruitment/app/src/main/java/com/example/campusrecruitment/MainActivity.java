@@ -3,12 +3,14 @@ package com.example.campusrecruitment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
-
-
 
     //private FirebaseAuth mAuth;
 
@@ -29,15 +31,17 @@ public class MainActivity extends AppCompatActivity {
         slogin.animate().translationX(0f).setDuration(1200);
         clogin.animate().translationX(0f).setDuration(1800);
         newaccount.animate().translationX(0f).setDuration(2400);
+        //mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
     }
+
     public void goToLogin(View v)
     {
-        Intent i = new Intent(this, Login.class);
+        Intent i = new Intent(this, login.class);
         startActivity(i);
         finish();
     }
